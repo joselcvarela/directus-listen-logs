@@ -34,5 +34,17 @@ async function start(accessToken: string, projectUrl: string) {
 ### As a CLI tool
 
 ```sh
+$  ACCESS_TOKEN="XX" PROJECT_URL="https://example.directus.io" npx directus-listen-logs > logs.jsonl
+```
+
+```sh
 $  ACCESS_TOKEN="XX" npx directus-listen-logs --project-url "https://example.directus.io" > logs.jsonl
+```
+
+```sh
+$  npx directus-listen-logs --project-url "https://example.directus.io" # access token will be requested
+```
+
+```sh
+$  npx directus-listen-logs # access token nad project URL will be requested
 ```
