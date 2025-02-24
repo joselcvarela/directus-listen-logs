@@ -9,24 +9,24 @@ You can use these package in two ways: as a dependency on your project or as a C
 ### As a dependency
 
 ```ts
-import { listenLogs } from 'directus-listen-logs'
-import fs
+import { listenLogs } from "directus-listen-logs";
+import fs from "node:fs";
 
-start()
+start();
 
 async function start(accessToken: string, projectUrl: string) {
-  const abortController = new AbortController()
+  const abortController = new AbortController();
+  const out = fs.createWriteStream("./logs.jsonl");
 
   process.on("SIGINT", function () {
     abortController.abort();
   });
 
-
   listenLogs({
     abortSignal: abortController.signal,
     accessToken,
     projectUrl,
-    stream: process.stdout,
+    stream: out,
   });
 }
 ```
