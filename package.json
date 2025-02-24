@@ -1,0 +1,44 @@
+{
+  "name": "directus-listen-logs",
+  "version": "1.0.0",
+  "description": "Directus Listen Logs provides an interface to watch Directus project logs. Contains a CLI tool that streams logs to stdout.",
+  "main": "index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts",
+    "build": "tsup"
+  },
+  "exports": "./dist/listen-logs.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joselcvarela/directus-listen-logs.git"
+  },
+  "keywords": [
+    "directus",
+    "clone",
+    "files",
+    "assets",
+    "sync",
+    "synchronization"
+  ],
+  "author": "José Varela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joselcvarela/directus-listen-logs/issues"
+  },
+  "homepage": "https://github.com/joselcvarela/directus-listen-logs#readme",
+  "devDependencies": {
+    "@directus/sdk": "^19.0.1",
+    "@types/node": "^18.19.76",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.1.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ]
+}
