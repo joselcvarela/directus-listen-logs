@@ -1,6 +1,6 @@
 {
   "name": "directus-listen-logs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Directus Listen Logs provides an interface to watch Directus project logs. Contains a CLI tool that streams logs to stdout.",
   "main": "index.js",
   "bin": "dist/index.js",
